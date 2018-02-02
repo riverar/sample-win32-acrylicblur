@@ -1,0 +1,23 @@
+﻿<Window x:Class="AcrylicBlurDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Hello Blur!" Height="500" Width="500"
+        Background="#01000000"
+        AllowsTransparency="True"
+        WindowStyle="None"
+        BorderThickness="3"
+        BorderBrush="Gray"
+        MouseDown="Window_MouseDown"
+        WindowStartupLocation="CenterScreen"
+        Loaded="Window_Loaded">
+    <Grid>
+        <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="64" Foreground="White" TextAlignment="Center">
+            Win32 <LineBreak/>
+            Acrylic Blur
+        </TextBlock>
+            <Label Foreground="White">Opacity:</Label>
+            <Slider Value="{Binding BlurOpacity}" Minimum="0" Maximum="255" Interval="15" TickPlacement="BottomRight" TickFrequency="15" IsSnapToTickEnabled="True" Margin="2,0,-2,0"></Slider>
+        </StackPanel>
+    </Grid>
+</Window>
